@@ -1,11 +1,14 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class Veiculo {
 	protected int placa;
 	protected String modelo;
 	protected Date ano;
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 	
 	//construtor
 	public Veiculo(int placa, String modelo, Date ano) {
