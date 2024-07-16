@@ -40,7 +40,10 @@ public class Estacionamento {
 		 return total;
 	}
 	
-	
+	//excessão ao iniciar novo cadastro
+	public void erroIniciarCad() throws CadException {
+		throw new CadException("A resposta inserida é diferente do esperado!");
+	}
 	
 	
 	

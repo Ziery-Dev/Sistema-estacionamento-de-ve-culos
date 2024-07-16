@@ -9,7 +9,7 @@ public class Moto extends Veiculo{
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 	
 	//construtor
-	public Moto(int placa, String modelo, Date ano, int cilindradas) {
+	public Moto(String placa, String modelo, Date ano, int cilindradas) {
 		super(placa, modelo, ano);
 		this.cilindradas = cilindradas;
 	}
@@ -34,7 +34,7 @@ public class Moto extends Veiculo{
 	
 	@Override
 	public  void exibirDetalhes() {
-		System.out.println("Modelo: " + modelo + "\nPlaca: " + placa + "\nAno de fabricação: " + sdf.format(ano));
+		System.out.println("Tipo de veículo: Moto " + "\nModelo: " + modelo + "\nPlaca: " + placa + "\nAno de fabricação: " + sdf.format(ano)+ "\nTaxa de estacionamento: "+ String.format("%.2f", cacularTaxa()) );
 	};
 	
 	

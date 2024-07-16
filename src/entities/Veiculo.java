@@ -4,14 +4,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class Veiculo {
-	protected int placa;
+	protected String placa;
 	protected String modelo;
 	protected Date ano;
 	
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
 	
 	//construtor
-	public Veiculo(int placa, String modelo, Date ano) {
+	public Veiculo(String placa, String modelo, Date ano) {
 		this.placa = placa;
 		this.modelo = modelo;
 		this.ano = ano;
@@ -19,11 +19,11 @@ public abstract class Veiculo {
 	
 	
 	//getters e setters
-	public int getPlaca() {
+	public String getPlaca() {
 		return placa;
 	}
 
-	public void setPlaca(int placa) {
+	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
 

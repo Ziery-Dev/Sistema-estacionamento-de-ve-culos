@@ -6,7 +6,7 @@ public class Carro  extends Veiculo{
 	private int cavPotencia;
 	
 	//construtor
-	public Carro(int placa, String modelo, Date ano, int cavPotencia ) {
+	public Carro(String placa, String modelo, Date ano, int cavPotencia ) {
 		super(placa, modelo, ano);
 		this.cavPotencia = cavPotencia;
 	}
@@ -34,7 +34,7 @@ public class Carro  extends Veiculo{
 
 	@Override
 	public void exibirDetalhes() {
-		System.out.println("Modelo: " + modelo + "\nPlaca: " + placa + "\nAno de fabricação: " + sdf.format(ano));
+		System.out.println("Tipo de veículo: Carro " + "\nModelo: " + modelo + "\nPlaca: " + placa + "\nAno de fabricação: " + sdf.format(ano) + "\nTaxa de estacionamento: "+ String.format("%.2f", cacularTaxa()));
 
 	}
 
