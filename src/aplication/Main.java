@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+import entities.Carro;
 import entities.Estacionamento;
 import entities.Moto;
 
@@ -23,7 +24,7 @@ public class Main {
 		System.out.println("Deseja cadastrar um novo veículo? S/N");
 		char comando = sc.next().toUpperCase().charAt(0);
 		
-		while(comando == 'S') {
+		while(comando == 'S') { //se escolher sim, realiza o cadastro de um novo veiculo
 			System.out.println("Insira o modelo do veiculo");
 			sc.nextLine();
 			String modelo = sc.nextLine();
@@ -47,10 +48,21 @@ public class Main {
 				//chamado da função que adiciona as informações da moto à lista passando a instancia da classe moto criada
 				estacionamento.adicionarVeiculo(moto);
 				
-				System.out.println("Deseja cadastrar um novo veículo? S/N");
-				comando = sc.next().toUpperCase().charAt(0);
+				
+			}
+			else if(carOuMoto == 'C') { //se  a escolha for moto
+				System.out.println("Insira a quantidade de cavalos de potência");
+				int cavalos = sc.nextInt();
+				//aqui é a instacia da classe moto, onde os dados são passado como parâmetro
+				Carro carro = new Carro( placa, modelo, ano, cavalos);
+				
+				//chamado da função que adiciona as informações da moto à lista passando a instancia da classe moto criada
+				estacionamento.adicionarVeiculo(carro);
+				
 			}
 			
+			System.out.println("Deseja cadastrar um novo veículo? S/N");
+			comando = sc.next().toUpperCase().charAt(0);
 			
 		}
 		
@@ -61,6 +73,7 @@ public class Main {
 		
 		
 		System.err.println("Programa encerrado!");
+		
 
 		sc.close();
 	}

@@ -20,6 +20,8 @@ public class Estacionamento {
     	lista.add(v);
     }
 	
+    
+    //exibe a lista de veiculos, mostrando detalhes dos veiculos atraves do chamado do metodo exibir detalhes presente tanto na classe moto quanto na classe carro
 	public void exibirVeiculos(){
 		int contador = 01;
 		 for(Veiculo v : lista) {
@@ -29,10 +31,11 @@ public class Estacionamento {
 		 }
 	}
 	
+	//calcula o total de taxa de estacionamento somando todos os veiculos
 	public double totalEstac() {
 		double total = 0;
 		 for(Veiculo v : lista) {
-			total = v.cacularTaxa();
+			total += v.cacularTaxa();
 		 }
 		 return total;
 	}
